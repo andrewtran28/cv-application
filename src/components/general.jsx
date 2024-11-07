@@ -2,7 +2,7 @@ import DynamicInput from './Input'
 
 function GeneralForm ({ resume, onChange }) {
     return (<div className="general-form">
-        <form action="" onSubmit={(e) => e.preventDefault()}>
+        <form action="">
 
             <DynamicInput 
                 label="First Name: "
@@ -10,7 +10,6 @@ function GeneralForm ({ resume, onChange }) {
                 name="firstName"
                 value={resume.name}
                 onChange={onChange}
-
                 placeholder="Hung"
             />
             <br />

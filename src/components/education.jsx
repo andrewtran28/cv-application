@@ -1,39 +1,65 @@
-import { useState } from 'react';
+import DynamicInput from './Input';
 
-function EducationForm() {
-    const [school, setSchool] = useState("");
-    const [field, setField] = useState("");
-    const [degree, setDegree] = useState("");
-    const [year, setYear] = useState("");
+function EducationForm(resume, onChange) {
+    return (<div className="education-form">
+        <form>
+            <DynamicInput 
+                    label="School/Institution: "
+                    type="text"
+                    name="school"
+                    value={resume.name}
+                    onChange={onChange}
+                    placeholder="Carleton University"
+                />
+                <br />
 
-    const handleSchool = (e) => {
-        setSchool(e.target.value);
-    }
+            <DynamicInput 
+                label="Field of Study: "
+                type="text"
+                name="field"
+                value={resume.name}
+                onChange={onChange}
+                placeholder="Electrical Engineering"
+            />
+            <br />
 
-    const handleField = (e) => {
-        setField(e.target.value);
-    }
+            <DynamicInput 
+                label="Degree: "
+                type="text"
+                name="degree"
+                value={resume.name}
+                onChange={onChange}
+                placeholder="B.Eng"
+            />
+            <br />
 
-    const handleDegree = (e) => {
-        setDegree(e.target.value);
-    }
+            <DynamicInput 
+                label="Start Date: "
+                type="date"
+                name="start-date"
+                value={resume.name}
+                onChange={onChange}
+            />
+            
+            <DynamicInput 
+                label="End Date: "
+                type="date"
+                name="end-date"
+                value={resume.name}
+                onChange={onChange}
+            />
+            <br />
 
-    const handleYear = (e) => {
-        setYear(e.target.value);
-    }
-
-    const addEducation = () => {
-
-    }
-
-    return (<div className="educationForm">
-        <label for="school">School/Institution:{' '}</label>
-        <input type="text" id="firstName" value={school} onChange={handleSchool} placeholder="College University" />
+            <div className='btns-education'>
+                <button className="btn-remove" onClick={() => onpointermove(index)}>Delete</button>
+                <button className="btn-collapse">OK</button>
+            </div>
+        </form>
     </div>);
 }
 
-function EducationSection() {
-    
+function addEducation() {
+
 }
 
 export default EducationForm;
