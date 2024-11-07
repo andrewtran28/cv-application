@@ -2,9 +2,10 @@ import { useState } from 'react';
 import GeneralForm from './components/general';
 import EducationForm from './components/education';
 import Resume from './components/Resume';
+import example from './example';
 
 function App() {
-    const [resume, setResume] = useState({firstName: "testFirst", lastName: "testLast", phone: "555-5555", email: "email@address.com", objective: "I want to be the very best. Like no one ever was."});
+    const [resume, setResume] = useState(example);
 
     const handleGeneralChange = (e) => {
         setResume({ ...resume, [e.target.name]: e.target.value });
@@ -35,13 +36,16 @@ function App() {
         setResume({...resume, education: resume.education.filter((edu, index) => index !==index)});
     }
 
-    return (<>
-        <GeneralForm resume={resume} onChange={handleGeneralChange}/>
-        <br />
-        <EducationForm resume={resume} onChange={handleEducationChange}/>
-
-        <Resume resume={resume} />
-    </>)
+    return (<div className="web-layout">
+        <div className="form-cont">
+            <GeneralForm resume={resume} onChange={handleGeneralChange}/>
+            <EducationForm resume={resume} onChange={handleEducationChange}/>
+        </div>
+        
+        <div className="resume-cont">
+            <Resume resume={resume} />
+        </div>
+    </div>)
 }
 
 export default App;

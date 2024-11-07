@@ -2,7 +2,7 @@ function DynamicInput ({ label, type, name, value, onChange, placeholder }) {
     if (type === 'textarea') {
         return(
             <>
-              <label>{label}</label>
+              <label>{label}</label><br />
               <textarea 
                 rows={5}
                 name={name} 
@@ -16,7 +16,7 @@ function DynamicInput ({ label, type, name, value, onChange, placeholder }) {
     } else {
         return (
             <>
-              <label>{label}</label>
+              <label>{label}</label><br />
               <input 
                 type={type} 
                 name={name} 

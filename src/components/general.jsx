@@ -2,30 +2,21 @@ import DynamicInput from './Input'
 
 function GeneralForm ({ resume, onChange }) {
     return (<div className="general-form">
+        <h2>Personal Info</h2>
+
         <form action="">
-
             <DynamicInput 
-                label="First Name: "
+                label="Name"
                 type="text"
-                name="firstName"
+                name="fullName"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="Hung"
+                placeholder="Hung Lo"
             />
             <br />
 
             <DynamicInput 
-                label="Last Name: "
-                type="text"
-                name="lastName"
-                value={resume.name}
-                onChange={onChange}
-                placeholder="Lo"
-            />
-            <br />
-
-            <DynamicInput 
-                label="E-Mail: "
+                label="E-Mail"
                 type="email"
                 name="email"
                 value={resume.name}
@@ -35,7 +26,7 @@ function GeneralForm ({ resume, onChange }) {
             <br />
 
             <DynamicInput 
-                label="Phone: "
+                label="Phone"
                 type="phone"
                 name="phone"
                 value={resume.name}
@@ -45,16 +36,24 @@ function GeneralForm ({ resume, onChange }) {
             <br />
 
             <DynamicInput 
-                label="Objective: "
+                label="location"
+                type="text"
+                name="location"
+                value={resume.name}
+                onChange={onChange}
+                placeholder="Ottawa, ON"
+            />
+            <br />
+
+            <DynamicInput 
+                label="Objective"
                 type="textarea"
                 name="objective"
                 value={resume.name}
                 onChange={onChange}
                 placeholder=""
             />
-            <br />
         </form>
-
     </div>);
 }
 

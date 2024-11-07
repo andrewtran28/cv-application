@@ -1,30 +1,22 @@
 import DynamicInput from './Input';
 
-function EducationForm(resume, onChange) {
+function EducationForm( {resume, onChange} ) {
     return (<div className="education-form">
-        <form>
-            <DynamicInput 
-                    label="School/Institution: "
-                    type="text"
-                    name="school"
-                    value={resume.name}
-                    onChange={onChange}
-                    placeholder="Carleton University"
-                />
-                <br />
+        <h2>Education</h2>
 
+        <form action="">
             <DynamicInput 
-                label="Field of Study: "
+                label="School/Institution"
                 type="text"
-                name="field"
+                name="school"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="Electrical Engineering"
+                placeholder="Carleton University"
             />
             <br />
 
             <DynamicInput 
-                label="Degree: "
+                label="Degree"
                 type="text"
                 name="degree"
                 value={resume.name}
@@ -34,17 +26,37 @@ function EducationForm(resume, onChange) {
             <br />
 
             <DynamicInput 
-                label="Start Date: "
+                label="Field of Study"
+                type="text"
+                name="field"
+                value={resume.name}
+                onChange={onChange}
+                placeholder="Electrical Engineering"
+            />
+            <br />
+
+            <DynamicInput 
+                label="Location"
+                type="text"
+                name="schoolLocation"
+                value={resume.name}
+                onChange={onChange}
+                placeholder="Toronto, ON"
+            />
+            <br />
+
+            <DynamicInput 
+                label="Start Date"
                 type="date"
-                name="start-date"
+                name="startDate"
                 value={resume.name}
                 onChange={onChange}
             />
             
             <DynamicInput 
-                label="End Date: "
+                label="End Date"
                 type="date"
-                name="end-date"
+                name="endDate"
                 value={resume.name}
                 onChange={onChange}
             />
