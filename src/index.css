@@ -97,6 +97,11 @@ input, textarea {
   top: 0;
 }
 
+.responsibilities {
+  white-space: pre-wrap;
+  /* line-height: 1rem; */
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

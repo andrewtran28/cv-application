@@ -59,7 +59,7 @@ function ExperienceForm({ resume, onChange }) {
                 name="responsibilities"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="Design front-end web pages. Create scalable web-apps intended for re-usability and efficient productivity."
+                placeholder="Use * to create a • bullet point"
             />
             <br />                  
         </form>
