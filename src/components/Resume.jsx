@@ -15,6 +15,10 @@ function Resume({ resume }) {
     }
 
     const bulletPoints = (text) => {
+        if (text === "") {
+            return text;
+        }
+
         return text.replace(/\*/g, "•");
     }
 
@@ -48,21 +52,26 @@ function Resume({ resume }) {
             <section className="resume-education">
                 <h2>Education</h2>
 
-                <div className="education">
-                    <div className="school"><strong>{resume.school}</strong></div>
-                    <span><em>{resume.degree}, {resume.field}</em></span> <br />
-                        <div className="date-location">
-                            {formatDate(resume.graduationDate)}<br />
-                            {resume.schoolLocation}
-                        </div>
-                </div>
+                <ul>
+                    {resume.education.map((education, index) => (
+                        <li key="{index}">
+                            <div className="education">
+                                <div className="school"><strong>{education.school}</strong></div>
+                                <span><em>{education.degree}, {education.field}</em></span><br />
+                                    <div className="date-location">
+                                        {formatDate(education.graduationDate)}<br />
+                                        {education.schoolLocation}
+                                    </div>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             </section>
             <br />
             <hr />
             <br />
         </div>
     )
-
 }
 
 export default Resume;
