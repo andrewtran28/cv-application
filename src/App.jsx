@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import GeneralForm from './components/general';
-import EducationForm from './components/education';
+import PersonalForm from './components/FormPersonal';
+import EducationForm from './components/FormEducation';
+import ExperienceForm from './components/FormExperience';
 import Resume from './components/Resume';
 import example from './example';
 
 function App() {
     const [resume, setResume] = useState(example);
 
-    const handleGeneralChange = (e) => {
+    const handlePersonalChange = (e) => {
         setResume({ ...resume, [e.target.name]: e.target.value });
     }
 
@@ -38,7 +39,8 @@ function App() {
 
     return (<div className="web-layout">
         <div className="form-cont">
-            <GeneralForm resume={resume} onChange={handleGeneralChange}/>
+            <PersonalForm resume={resume} onChange={handlePersonalChange}/>
+            <ExperienceForm resume={resume} onChange={handleExperienceChange}/>
             <EducationForm resume={resume} onChange={handleEducationChange}/>
         </div>
         

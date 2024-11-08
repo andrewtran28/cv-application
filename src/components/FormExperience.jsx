@@ -1,47 +1,37 @@
-import DynamicInput from './Input';
+import DynamicInput from './Input'
 
-function EducationForm( {resume, onChange} ) {
-    return (<div className="education-form">
-        <h2>Education</h2>
+function ExperienceForm({ resume, onChange }) {
+    return (<div className="form-experience">
+        <h2>Professional Experience</h2>
 
         <form action="">
             <DynamicInput 
-                label="School/Institution"
+                label="Company"
                 type="text"
-                name="school"
+                name="company"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="Carleton University"
+                placeholder="Company Name"
             />
             <br />
 
             <DynamicInput 
-                label="Degree"
+                label="Position/Title"
                 type="text"
-                name="degree"
+                name="position"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="B.Eng"
-            />
-            <br />
-
-            <DynamicInput 
-                label="Field of Study"
-                type="text"
-                name="field"
-                value={resume.name}
-                onChange={onChange}
-                placeholder="Electrical Engineering"
+                placeholder="Junior Web Developer"
             />
             <br />
 
             <DynamicInput 
                 label="Location"
                 type="text"
-                name="schoolLocation"
+                name="workLocation"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="Toronto, ON"
+                placeholder="Vancouver, BC"
             />
             <br />
 
@@ -52,6 +42,7 @@ function EducationForm( {resume, onChange} ) {
                 value={resume.name}
                 onChange={onChange}
             />
+            <br />
             
             <DynamicInput 
                 label="End Date"
@@ -61,17 +52,18 @@ function EducationForm( {resume, onChange} ) {
                 onChange={onChange}
             />
             <br />
-
-            <div className='btns-education'>
-                <button className="btn-remove" onClick={() => onpointermove(index)}>Delete</button>
-                <button className="btn-collapse">OK</button>
-            </div>
+            
+            <DynamicInput 
+                label="Responsibilities"
+                type="textarea"
+                name="responsibilities"
+                value={resume.name}
+                onChange={onChange}
+                placeholder="Design front-end web pages. Create scalable web-apps intended for re-usability and efficient productivity."
+            />
+            <br />                  
         </form>
     </div>);
 }
 
-function addEducation() {
-
-}
-
-export default EducationForm;
+export default ExperienceForm;

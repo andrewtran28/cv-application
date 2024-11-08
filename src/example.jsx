@@ -10,8 +10,7 @@ const example = {
     school: "Carleton University",
     degree: "B.Eng",
     field: "Engineering - Electrical",
-    startDate: "September 2015",
-    endDate: "May 2020",
+    graduationDate: "May 2020",
     schoolLocation: "Toronto, ON",
     expanded: false,
     //     }

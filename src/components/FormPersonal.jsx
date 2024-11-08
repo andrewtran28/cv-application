@@ -1,7 +1,7 @@
 import DynamicInput from './Input'
 
-function GeneralForm ({ resume, onChange }) {
-    return (<div className="general-form">
+function PersonalForm ({ resume, onChange }) {
+    return (<div className="personal-form">
         <h2>Personal Info</h2>
 
         <form action="">
@@ -57,4 +57,4 @@ function GeneralForm ({ resume, onChange }) {
     </div>);
 }
 
-export default GeneralForm;
+export default PersonalForm;
