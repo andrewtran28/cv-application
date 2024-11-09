@@ -29,7 +29,7 @@ function Resume({ resume }) {
                 <div className='header-details'>
                 {resume.phone} | {resume.email} | {resume.location}
                 </div>
-                <p>{resume.objective}</p>
+                <p className="objective">{resume.objective}</p>
             </section>
             <hr />
 
@@ -49,11 +49,11 @@ function Resume({ resume }) {
                                     {experience.workLocation}
                                 </div>
                             </div>
+                            <br />
                         </li>
                     ))}
                 </ul>
             </section>
-            <br />
             <hr />
 
             <section className="resume-education">
@@ -71,13 +71,12 @@ function Resume({ resume }) {
                                         {education.schoolLocation}
                                     </div>
                             </div>
+                            <br />
                         </li>
                     ))}
                 </ul>
             </section>
-            <br />
             <hr />
-            <br />
         </div>
     )
 }

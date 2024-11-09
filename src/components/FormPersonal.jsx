@@ -18,7 +18,7 @@ function PersonalForm ({ resume, onChange }) {
             <DynamicInput 
                 label="E-Mail"
                 type="email"
-                name="email"
+                name="email" 
                 value={resume.name}
                 onChange={onChange}
                 placeholder="email@address.com"
@@ -36,7 +36,7 @@ function PersonalForm ({ resume, onChange }) {
             <br />
 
             <DynamicInput 
-                label="location"
+                label="Location"
                 type="text"
                 name="location"
                 value={resume.name}
@@ -54,6 +54,7 @@ function PersonalForm ({ resume, onChange }) {
                 placeholder=""
             />
         </form>
+        <hr />
     </div>);
 }
 
