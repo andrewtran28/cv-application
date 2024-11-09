@@ -19,7 +19,7 @@ function Resume({ resume }) {
             return text;
         }
 
-        return text.replace(/\*/g, "•");
+        return text.replace(/\*/g, "• ");
     }
 
     return (
@@ -35,29 +35,37 @@ function Resume({ resume }) {
 
             <section className="resume-experience">
                 <h2>Professional Experience</h2>
-
-                <div className="experience">
-                    <div className="company"><strong>{resume.company}</strong></div>
-                    <span><em>{resume.position}</em></span>
-                    <div className="date-location">
-                            {formatDate(resume.startDate)} - {formatDate(resume.endDate)}<br />
-                            {resume.workLocation}
-                    </div>
-                    <div className="responsibilities">{bulletPoints(resume.responsibilities)}</div>
-                </div>
+                <ul>
+                    {resume.experience.map((experience, index) => (
+                        <li key={index}>
+                            <div className="experience">
+                                <div className="company"><strong>{experience.company}</strong></div>
+                                <span><em>
+                                    {experience.position}
+                                </em></span><br />
+                                <div className="responsibilities">{bulletPoints(experience.responsibilities)}</div>
+                                <div className="date-location">
+                                    {formatDate(experience.startDate)} - {formatDate(experience.endDate)}<br />
+                                    {experience.workLocation}
+                                </div>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             </section>
             <br />
             <hr />
 
             <section className="resume-education">
                 <h2>Education</h2>
-
                 <ul>
                     {resume.education.map((education, index) => (
-                        <li key="{index}">
+                        <li key={index}>
                             <div className="education">
                                 <div className="school"><strong>{education.school}</strong></div>
-                                <span><em>{education.degree}, {education.field}</em></span><br />
+                                <span><em>
+                                    {education.degree}, {education.field}
+                                </em></span><br />
                                     <div className="date-location">
                                         {formatDate(education.graduationDate)}<br />
                                         {education.schoolLocation}

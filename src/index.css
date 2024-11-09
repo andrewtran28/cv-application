@@ -67,10 +67,10 @@ input, textarea {
 }
 
 .resume-cont {
-  border: 1px solid orange;
   background-color: white;
   color: #242424;
   min-width: 700px;
+  max-width: 21.59cm;
   margin: 20px;
   padding: 0 40px;
 }

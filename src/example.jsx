@@ -5,12 +5,19 @@ const example = {
     location: "Ottawa, ON",
     objective: "I wanna be the very best like no one ever was. To catch them is my real test, to train them is my cause. I will travel across the land searching far and wide. Each Pokémon to understand the power that's inside.",
 
-    company: "ABC Company",
-    position: "Web Developer",
-    workLocation: "Toronto, ON",
-    startDate: "September 2020",
-    endDate: "November 2024",
-    responsibilities: "",
+
+    experience: [
+        {
+            company: "ABC Company",
+            position: "Web Developer",
+            workLocation: "Toronto, ON",
+            startDate: "September 2020",
+            endDate: "November 2024",
+            responsibilities: "",
+            id: crypto.randomUUID,
+            expanded: false,
+        },
+    ],
 
     education: [
         {
