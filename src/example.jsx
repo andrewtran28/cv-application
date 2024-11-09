@@ -1,5 +1,5 @@
 const example = {
-    fullName: "Hung Lo",
+    fullName: "Andrew Tran",
     phone: "(613) 555-5555",
     email: "email@address.com",
     location: "Ottawa, ON",
@@ -22,8 +22,7 @@ const example = {
     education: [
         {
             school: "Carleton University",
-            degree: "B.Eng",
-            field: "Engineering - Electrical",
+            degree: "B.Eng, Electrical Engineer",
             graduationDate: "May 2020",
             schoolLocation: "Ottawa, ON",
             id: crypto.randomUUID,

@@ -4,7 +4,7 @@ function DynamicInput ({ label, type, name, value, onChange, placeholder }) {
             <>
               <label>{label}</label><br />
               <textarea 
-                rows={4}
+                rows={5}
                 name={name} 
                 value={value} 
                 onChange={onChange}

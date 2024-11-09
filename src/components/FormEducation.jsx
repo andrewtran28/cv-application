@@ -30,16 +30,6 @@ function EducationForm({ educations, onChange, onAdd, onRemove, onExpand }) {
                             <br />
 
                             <DynamicInput 
-                                label="Field of Study"
-                                type="text"
-                                name="field"
-                                value={education.field}
-                                onChange={onChange}
-                                placeholder="Electrical Engineering"
-                            />
-                            <br />
-
-                            <DynamicInput 
                                 label="Location"
                                 type="text"
                                 name="schoolLocation"
@@ -67,7 +57,7 @@ function EducationForm({ educations, onChange, onAdd, onRemove, onExpand }) {
             return (
                 <div className="form">
                     <div className="collapse-title">{education.school} <br/></div>
-                    <div className="collapse-subtitle">{education.degree}, {education.field}</div>
+                    <div className="collapse-subtitle">{education.degree}</div>
                     <button className="btn-expand" onClick={() => onExpand(index)}>▼</button>
                 </div>)
         }
@@ -77,7 +67,7 @@ function EducationForm({ educations, onChange, onAdd, onRemove, onExpand }) {
         <div className="form-education">
             <h2>Education</h2>
             <ul>{educationArr}</ul>
-            <div className="btn-add"><button onClick={onAdd}>Add Education</button></div>
+            <div className="btn-add"><button onClick={onAdd}>+ Add Education</button></div>
         </div>
     );
 }

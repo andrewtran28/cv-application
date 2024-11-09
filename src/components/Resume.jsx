@@ -27,22 +27,20 @@ function Resume({ resume }) {
             <section className="resume-header">
                 <h1>{resume.fullName}</h1>
                 <div className='header-details'>
-                {resume.phone} | {resume.email} | {resume.location}
+                    {resume.phone} | {resume.email} | {resume.location}
                 </div>
                 <p className="objective">{resume.objective}</p>
             </section>
-            <hr />
 
             <section className="resume-experience">
+                <hr />
                 <h2>Professional Experience</h2>
                 <ul>
                     {resume.experience.map((experience, index) => (
                         <li key={index}>
                             <div className="experience">
                                 <div className="company"><strong>{experience.company}</strong></div>
-                                <span><em>
-                                    {experience.position}
-                                </em></span><br />
+                                <span><em>{experience.position}</em></span><br />
                                 <div className="responsibilities">{bulletPoints(experience.responsibilities)}</div>
                                 <div className="date-location">
                                     {formatDate(experience.startDate)} - {formatDate(experience.endDate)}<br />
@@ -54,18 +52,16 @@ function Resume({ resume }) {
                     ))}
                 </ul>
             </section>
-            <hr />
 
             <section className="resume-education">
+                <hr />
                 <h2>Education</h2>
                 <ul>
                     {resume.education.map((education, index) => (
                         <li key={index}>
                             <div className="education">
                                 <div className="school"><strong>{education.school}</strong></div>
-                                <span><em>
-                                    {education.degree}, {education.field}
-                                </em></span><br />
+                                <span><em>{education.degree}</em></span><br />
                                     <div className="date-location">
                                         {formatDate(education.graduationDate)}<br />
                                         {education.schoolLocation}

@@ -69,9 +69,10 @@ function App() {
 
     const addEducation = () => {
         const newEducation = {
-            school: '',
-            field: '',
-            degree: '',
+            school: 'University',
+            degree: 'Degree',
+            field: 'Field',
+            schoolLocation: 'Location',
             graduationDate: month + " " + year,
             expanded: true,
             id: crypto.randomUUID(),

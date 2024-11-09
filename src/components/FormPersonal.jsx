@@ -11,7 +11,6 @@ function PersonalForm ({ resume, onChange }) {
                 name="fullName"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="Hung Lo"
             />
             <br />
 
@@ -21,7 +20,6 @@ function PersonalForm ({ resume, onChange }) {
                 name="email" 
                 value={resume.name}
                 onChange={onChange}
-                placeholder="email@address.com"
             />
             <br />
 
@@ -31,7 +29,6 @@ function PersonalForm ({ resume, onChange }) {
                 name="phone"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="555-5555"
             />
             <br />
 
@@ -41,7 +38,6 @@ function PersonalForm ({ resume, onChange }) {
                 name="location"
                 value={resume.name}
                 onChange={onChange}
-                placeholder="Ottawa, ON"
             />
             <br />
 

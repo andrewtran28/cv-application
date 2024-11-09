@@ -15,7 +15,6 @@ function ExperienceForm({ experiences, onChange, onAdd, onRemove, onExpand }) {
                                 name="company"
                                 value={experience.company}
                                 onChange={onChange}
-                                placeholder="Company Name"
                             />
                             <br />
 
@@ -25,7 +24,6 @@ function ExperienceForm({ experiences, onChange, onAdd, onRemove, onExpand }) {
                                 name="position"
                                 value={experience.position}
                                 onChange={onChange}
-                                placeholder="Junior Web Developer"
                             />
                             <br />
 
@@ -35,7 +33,6 @@ function ExperienceForm({ experiences, onChange, onAdd, onRemove, onExpand }) {
                                 name="workLocation"
                                 value={experience.workLocation}
                                 onChange={onChange}
-                                placeholder="Vancouver, BC"
                             />
                             <br />
 
@@ -87,7 +84,7 @@ function ExperienceForm({ experiences, onChange, onAdd, onRemove, onExpand }) {
         <div className="form-experience">
             <h2>Professional Experience</h2>
             <ul>{experienceArr}</ul>
-            <div className="btn-add"><button onClick={onAdd}>Add Experience</button></div>
+            <div className="btn-add"><button onClick={onAdd}>+ Add Experience</button></div>
             <hr />
         </div>
     );
