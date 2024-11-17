@@ -21,8 +21,8 @@ h2 {
 
 section, .objective {
   text-align: justify;
+  word-break:break-all;
   margin: 20px 0;
-  text-wrap: wrap;
 }
 
 ul {
@@ -75,6 +75,14 @@ input, textarea {
   margin-top: 3px;
 }
 
+input {
+  max-width: 100px;
+}
+
+textarea {
+  min-width: 500px;
+}
+
 .collapse-title {
   font-weight: 600;
   font-size: 1.25rem;
@@ -102,7 +110,8 @@ input, textarea {
 .resume-cont {
   background-color: white;
   color: #242424;
-  max-width: 8.5in;
+  min-width: 8.5in;
+  width: 8.5in;
   min-height: 11in;
   padding: 0 40px;
   margin: 30px 20px;
@@ -133,7 +142,7 @@ input, textarea {
   margin-top: 20px;
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1500px) {
   .web-layout {
     flex-direction: column;
     align-items: center;
@@ -145,6 +154,10 @@ input, textarea {
 
   input, textarea {
     line-height: 1.25rem;
-    min-width: 7.5in;
+
+  }
+
+  textarea {
+    min-width: 7.5in;    
   }
 }

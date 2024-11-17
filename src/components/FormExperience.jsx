@@ -85,6 +85,7 @@ function ExperienceForm({ experiences, onChange, onAdd, onRemove, onExpand }) {
             <h2>Professional Experience</h2>
             <ul>{experienceArr}</ul>
             <div className="btn-add"><button onClick={onAdd}>+ Add Experience</button></div>
+            <br />
             <hr />
         </div>
     );

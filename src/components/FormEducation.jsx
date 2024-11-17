@@ -68,6 +68,8 @@ function EducationForm({ educations, onChange, onAdd, onRemove, onExpand }) {
             <h2>Education</h2>
             <ul>{educationArr}</ul>
             <div className="btn-add"><button onClick={onAdd}>+ Add Education</button></div>
+            <br />
+            <hr />
         </div>
     );
 }
