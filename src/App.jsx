@@ -13,9 +13,9 @@ const year = date.getFullYear();
 function App() {
     const [resume, setResume] = useState(example);
 
-    const handlePersonalChange = (e) => {
+    function handlePersonalChange(e) {
         setResume({ ...resume, [e.target.name]: e.target.value });
-    }
+      }
 
     const handleExperienceChange = (e) => {
         const {name, value} = e.target;
