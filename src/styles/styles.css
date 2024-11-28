@@ -21,7 +21,8 @@ h2 {
 
 section, .objective {
   text-align: justify;
-  word-break:break-all;
+  word-break:break-word;
+  text-wrap: wrap;
   margin: 20px 0;
 }
 
